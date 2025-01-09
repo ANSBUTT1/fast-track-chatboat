@@ -49,7 +49,7 @@ const SearchEngine = () => {
   };
 
   return (
-    <div className="relative flex flex-col justify-center items-center min-h-[80vh] text-center py-8 ">
+    <div className="relative flex flex-col justify-center items-center min-h-screen text-center py-16">
       <h1 className="text-5xl sm:text-6xl text-primary font-semibold mb-6">
         Fast Track
       </h1>
