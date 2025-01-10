@@ -24,6 +24,16 @@ const Navbar = () => {
   const toggleFastTrackDropdown = () =>
     setFastTrackDropdownVisible((prevState) => !prevState);
 
+  const closeDropdown = () => {
+    setDropdownVisible(false);
+    setFastTrackDropdownVisible(false);
+  };
+
+  const handleDropdownItemClick = () => {
+    // Close the dropdown when an item is clicked
+    closeDropdown();
+  };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -32,8 +42,7 @@ const Navbar = () => {
         fastTrackDropdownRef.current &&
         !fastTrackDropdownRef.current.contains(event.target)
       ) {
-        setDropdownVisible(false);
-        setFastTrackDropdownVisible(false);
+        closeDropdown();
       }
     };
 
@@ -48,14 +57,14 @@ const Navbar = () => {
           {/* Gmail Link */}
           <li>
             <div className="hover:underline text-sm font-semibold transition-colors duration-200 ease-in-out hover:text-primary cursor-pointer">
-            Services
+              Services
             </div>
           </li>
 
           {/* Images Link */}
           <li>
             <div className="hover:underline text-sm font-semibold transition-colors duration-200 ease-in-out hover:text-primary cursor-pointer">
-            Pricing
+              Pricing
             </div>
           </li>
 
@@ -91,7 +100,10 @@ const Navbar = () => {
                 ref={fastTrackDropdownRef}
                 className="grid grid-cols-2 md:grid-cols-3 gap-2 absolute top-8 -left-24 transform -translate-x-1/2 bg-gray-200 shadow-lg rounded-md mt-2 p-4 z-10 w-[20rem]"
               >
-                <div className="flex flex-col justify-center items-center">
+                <div
+                  onClick={handleDropdownItemClick}
+                  className="flex flex-col justify-center items-center"
+                >
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
                     style={{ height: "50px", width: "50px" }}
@@ -103,7 +115,10 @@ const Navbar = () => {
                   </span>
                 </div>
 
-                <div className="flex flex-col justify-center items-center">
+                <div
+                  onClick={handleDropdownItemClick}
+                  className="flex flex-col justify-center items-center"
+                >
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
                     style={{ height: "50px", width: "50px" }}
@@ -115,7 +130,10 @@ const Navbar = () => {
                   </span>
                 </div>
 
-                <div className="flex flex-col justify-center items-center">
+                <div
+                  onClick={handleDropdownItemClick}
+                  className="flex flex-col justify-center items-center"
+                >
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
                     style={{ height: "50px", width: "50px" }}
@@ -127,7 +145,10 @@ const Navbar = () => {
                   </span>
                 </div>
 
-                <div className="flex flex-col justify-center items-center">
+                <div
+                  onClick={handleDropdownItemClick}
+                  className="flex flex-col justify-center items-center"
+                >
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
                     style={{ height: "50px", width: "50px" }}
@@ -139,7 +160,10 @@ const Navbar = () => {
                   </span>
                 </div>
 
-                <div className="flex flex-col justify-center items-center">
+                <div
+                  onClick={handleDropdownItemClick}
+                  className="flex flex-col justify-center items-center"
+                >
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
                     style={{ height: "50px", width: "50px" }}
@@ -151,7 +175,10 @@ const Navbar = () => {
                   </span>
                 </div>
 
-                <div className="flex flex-col justify-center items-center">
+                <div
+                  onClick={handleDropdownItemClick}
+                  className="flex flex-col justify-center items-center"
+                >
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
                     style={{ height: "50px", width: "50px" }}
@@ -163,7 +190,10 @@ const Navbar = () => {
                   </span>
                 </div>
 
-                <div className="flex flex-col justify-center items-center">
+                <div
+                  onClick={handleDropdownItemClick}
+                  className="flex flex-col justify-center items-center"
+                >
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
                     style={{ height: "50px", width: "50px" }}
@@ -175,7 +205,10 @@ const Navbar = () => {
                   </span>
                 </div>
 
-                <div className="flex flex-col justify-center items-center">
+                <div
+                  onClick={handleDropdownItemClick}
+                  className="flex flex-col justify-center items-center"
+                >
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
                     style={{ height: "50px", width: "50px" }}
