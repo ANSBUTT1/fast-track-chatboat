@@ -36,14 +36,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target) &&
-        fastTrackDropdownRef.current &&
-        !fastTrackDropdownRef.current.contains(event.target)
-      ) {
-        closeDropdown();
-      }
+      closeDropdown(event);
     };
 
     document.addEventListener("mousedown", handleClickOutside);
