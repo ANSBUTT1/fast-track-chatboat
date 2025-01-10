@@ -15,18 +15,22 @@ import image from "../assets/student4.jpg"; // Image for user profile
 
 const Navbar = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const [isFastTrackDropdownVisible, setFastTrackDropdownVisible] = useState(false);
+  const [isFastTrackDropdownVisible, setFastTrackDropdownVisible] =
+    useState(false);
   const dropdownRef = useRef(null);
   const fastTrackDropdownRef = useRef(null);
 
   const toggleDropdown = () => setDropdownVisible((prevState) => !prevState);
-  const toggleFastTrackDropdown = () => setFastTrackDropdownVisible((prevState) => !prevState);
+  const toggleFastTrackDropdown = () =>
+    setFastTrackDropdownVisible((prevState) => !prevState);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        dropdownRef.current && !dropdownRef.current.contains(event.target) &&
-        fastTrackDropdownRef.current && !fastTrackDropdownRef.current.contains(event.target)
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        fastTrackDropdownRef.current &&
+        !fastTrackDropdownRef.current.contains(event.target)
       ) {
         setDropdownVisible(false);
         setFastTrackDropdownVisible(false);
@@ -44,14 +48,14 @@ const Navbar = () => {
           {/* Gmail Link */}
           <li>
             <div className="hover:underline text-sm font-semibold transition-colors duration-200 ease-in-out hover:text-primary cursor-pointer">
-              Gmail
+            Services
             </div>
           </li>
 
           {/* Images Link */}
           <li>
             <div className="hover:underline text-sm font-semibold transition-colors duration-200 ease-in-out hover:text-primary cursor-pointer">
-              Images
+            Pricing
             </div>
           </li>
 
@@ -68,7 +72,7 @@ const Navbar = () => {
             </div>
           </li>
 
-          {/* Fast Track Apps Icon with Tooltip */}
+          {/* FasTrak Apps Icon with Tooltip */}
           <li className="relative group">
             <div
               className="flex justify-center items-center p-2 rounded-full transition-all duration-200 ease-in-out hover:bg-primary/10 cursor-pointer"
@@ -77,11 +81,11 @@ const Navbar = () => {
             >
               <TbGridDots className="text-primary text-2xl" />
               <div className="absolute top-8 left-0 w-32 transform -translate-x-1/2 hidden group-hover:block text-xs font-semibold bg-primary/70 text-white py-2 px-4 rounded-md mt-3 transition-all duration-300 ease-in-out">
-             Fast Track Apps
-            </div>
+                FasTrak Apps
+              </div>
             </div>
 
-            {/* Fast Track Apps Dropdown */}
+            {/* FasTrak Apps Dropdown */}
             {isFastTrackDropdownVisible && (
               <div
                 ref={fastTrackDropdownRef}
@@ -90,51 +94,61 @@ const Navbar = () => {
                 <div className="flex flex-col justify-center items-center">
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
-                    style={{  height: "50px", width: "50px" }}
+                    style={{ height: "50px", width: "50px" }}
                   >
                     <FaApple className="text-primary text-3xl" />
                   </div>
-                  <span className="text-center text-primary text-sm ">Apple</span>
+                  <span className="text-center text-primary text-sm ">
+                    Apple
+                  </span>
                 </div>
 
                 <div className="flex flex-col justify-center items-center">
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
-                    style={{  height: "50px", width: "50px" }}
+                    style={{ height: "50px", width: "50px" }}
                   >
                     <FaGoogle className="text-[#4285F4] text-3xl" />
                   </div>
-                  <span className="text-center text-primary text-sm ">Google</span>
+                  <span className="text-center text-primary text-sm ">
+                    Google
+                  </span>
                 </div>
 
                 <div className="flex flex-col justify-center items-center">
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
-                    style={{  height: "50px", width: "50px" }}
+                    style={{ height: "50px", width: "50px" }}
                   >
                     <FaMicrosoft className="text-[#00A4EF] text-3xl" />
                   </div>
-                  <span className="text-center text-primary text-sm ">Microsoft</span>
+                  <span className="text-center text-primary text-sm ">
+                    Microsoft
+                  </span>
                 </div>
 
                 <div className="flex flex-col justify-center items-center">
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
-                    style={{  height: "50px", width: "50px"}}
+                    style={{ height: "50px", width: "50px" }}
                   >
                     <FaAmazon className="text-[#FF9900] text-3xl" />
                   </div>
-                  <span className="text-center text-primary text-sm ">Amazon</span>
+                  <span className="text-center text-primary text-sm ">
+                    Amazon
+                  </span>
                 </div>
 
                 <div className="flex flex-col justify-center items-center">
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
-                    style={{  height: "50px", width: "50px" }}
+                    style={{ height: "50px", width: "50px" }}
                   >
                     <FaFacebook className="text-[#1877F2] text-3xl" />
                   </div>
-                  <span className="text-center text-primary text-sm ">Facebook</span>
+                  <span className="text-center text-primary text-sm ">
+                    Facebook
+                  </span>
                 </div>
 
                 <div className="flex flex-col justify-center items-center">
@@ -144,17 +158,21 @@ const Navbar = () => {
                   >
                     <FaTwitter className="text-[#1DA1F2] text-3xl" />
                   </div>
-                  <span className="text-center text-primary text-sm ">Twitter</span>
+                  <span className="text-center text-primary text-sm ">
+                    Twitter
+                  </span>
                 </div>
 
                 <div className="flex flex-col justify-center items-center">
                   <div
                     className="flex justify-center items-center  rounded-full  cursor-pointer"
-                    style={{  height: "50px", width: "50px" }}
+                    style={{ height: "50px", width: "50px" }}
                   >
                     <FaLinkedin className="text-[#0A66C2] text-3xl" />
                   </div>
-                  <span className="text-center text-primary text-sm ">LinkedIn</span>
+                  <span className="text-center text-primary text-sm ">
+                    LinkedIn
+                  </span>
                 </div>
 
                 <div className="flex flex-col justify-center items-center">
@@ -164,7 +182,9 @@ const Navbar = () => {
                   >
                     <FaSlack className="text-[#4A154B] text-3xl" />
                   </div>
-                  <span className="text-center text-primary text-sm ">Slack</span>
+                  <span className="text-center text-primary text-sm ">
+                    Slack
+                  </span>
                 </div>
               </div>
             )}
@@ -184,9 +204,9 @@ const Navbar = () => {
                 className="rounded-full"
               />
             </div>
-              {/* Hover-based Dropdown */}
-              <div className="absolute text-start p-3 top-8 -left-16 w-48 transform -translate-x-1/2 hidden group-hover:block text-xs font-semibold bg-primary/70 text-white py-2 rounded-md mt-3 transition-all duration-300 ease-in-out">
-              <h1>FastTrack Account</h1>
+            {/* Hover-based Dropdown */}
+            <div className="absolute text-start p-3 top-8 -left-16 w-48 transform -translate-x-1/2 hidden group-hover:block text-xs font-semibold bg-primary/70 text-white py-2 rounded-md mt-3 transition-all duration-300 ease-in-out">
+              <h1>FasTrak Account</h1>
               <h1 className="text-gray-300">Anas Butt</h1>
               <h1 className="text-gray-300">anasbutt7079@gmail.com</h1>
             </div>
