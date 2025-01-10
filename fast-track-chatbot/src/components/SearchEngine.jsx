@@ -20,18 +20,18 @@ const SearchEngine = () => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   const suggestions = [
-    "What is the latest iPhone model released this year?",
-    "How do I connect my smartphone to a smart TV?",
-    "Who won the NBA championship last year?",
-    "What is the speed of light in kilometers per second?",
-    "What is the tallest mountain in the world?",
-    "How many countries are there in the European Union?",
-    "What is the latest iPhone model released this year?",
-    "How do I connect my smartphone to a smart TV?",
-    "Who won the NBA championship last year?",
-    "What is the speed of light in kilometers per second?",
-    "What is the tallest mountain in the world?",
-    "How many countries are there in the European Union?",
+    "What professional services should Fastrak include in a Pro subscription to cater to businesses or professionals?",
+    "How can Fastrak Pro enhance productivity and efficiency for its subscribers?",
+    "Should Fastrak Pro target specific industries or offer a broad range of professional services?",
+    "How can Fastrak Access offer exclusive content or features that create a sense of value for subscribers?",
+    "How can Fastrak create exclusive offerings for businesses?",
+    "How can Fastrak offer exclusivity?",
+    "What tools should FasTrak Essentials provide?",
+    "How should FasTrak Plus tier benefits work?",
+    "What innovations should FasTrak provide?",
+    "What exclusive features should FasTrak offer?",
+    "What makes FasTrak Premium valuable?",
+    "How can FasTrak Pro stand out?",
   ];
 
   const handleSearchChange = (e) => {
@@ -66,19 +66,19 @@ const SearchEngine = () => {
           className="border-[2px] text-xs md:text-sm border-[#d1d5db] px-3 py-2 rounded-2xl text-primary cursor-pointer"
           onClick={() =>
             handleSuggestionClick(
-              "What is the latest iPhone model released this year?"
+              "How can Fastrak offer exclusivity?"
             )
           }
         >
-          What is the latest iPhone model released this year?
+         How can Fastrak offer exclusivity?
         </p>
         <p
           className="border-[2px] text-xs md:text-sm border-[#d1d5db] px-3 py-2 rounded-2xl text-primary cursor-pointer"
           onClick={() =>
-            handleSuggestionClick("Who won the NBA championship last year?")
+            handleSuggestionClick("What services should Fastrak Pro offer?")
           }
         >
-          Who won the NBA championship last year?
+          What services should Fastrak Pro offer?
         </p>
       </div>
 
@@ -109,7 +109,7 @@ const SearchEngine = () => {
                 .map((suggestion, index) => (
                   <li
                     key={index}
-                    className="flex items-center gap-2 px-4 py-2 mb-1 cursor-pointer hover:bg-gray-100 rounded-tr-lg rounded-br-lg"
+                    className="flex text-start items-center gap-2 px-4 py-2 mb-1 cursor-pointer hover:bg-gray-100 rounded-tr-lg rounded-br-lg"
                     onClick={() => handleSuggestionClick(suggestion)}
                   >
                     <span className="text-gray-500">
