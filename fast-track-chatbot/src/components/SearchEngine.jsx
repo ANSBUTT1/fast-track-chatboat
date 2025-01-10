@@ -32,6 +32,8 @@ const SearchEngine = () => {
     "What exclusive features should FasTrak offer?",
     "What makes FasTrak Premium valuable?",
     "How can FasTrak Pro stand out?",
+    "How can FasTrak offer exclusivity?",
+    "What services should FasTrak Pro offer?",
   ];
 
   const handleSearchChange = (e) => {
