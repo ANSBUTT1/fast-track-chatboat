@@ -26,6 +26,12 @@ const SearchEngine = () => {
     "What is the speed of light in kilometers per second?",
     "What is the tallest mountain in the world?",
     "How many countries are there in the European Union?",
+    "What is the latest iPhone model released this year?",
+    "How do I connect my smartphone to a smart TV?",
+    "Who won the NBA championship last year?",
+    "What is the speed of light in kilometers per second?",
+    "What is the tallest mountain in the world?",
+    "How many countries are there in the European Union?",
   ];
 
   const handleSearchChange = (e) => {
