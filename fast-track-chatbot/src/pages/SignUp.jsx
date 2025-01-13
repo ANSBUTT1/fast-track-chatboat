@@ -26,7 +26,7 @@ const SignUp = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-200 ">
-      <div className="w-full max-w-md p-8 space-y-6 bg-white bg-opacity-90 shadow-2xl rounded-xl">
+      <div className="w-full   sm:max-w-lg lg:max-w-xl p-8 space-y-6 bg-secondary shadow-xl rounded-3xl">
         <h2 className="text-3xl font-extrabold text-center text-primary-500">FasTrak</h2>
         <Formik
           initialValues={{
