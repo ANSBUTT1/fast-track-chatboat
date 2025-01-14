@@ -84,9 +84,11 @@ const Navbar = () => {
 
               {/* Images Link */}
               <li>
+              <Link to="/pricing">
                 <div className="hover:underline text-sm font-semibold transition-colors duration-200 ease-in-out hover:text-primary cursor-pointer">
                   Pricing
                 </div>
+              </Link>
               </li>
 
               {/* Labs Icon with Tooltip */}
@@ -367,7 +369,7 @@ const Navbar = () => {
             <div className="flex flex-col justify-around gap-4">
              
 
-              <Link to="/login">
+              <Link >
               <button
                 onClick={() => {
                   setIsAuthenticated(true);
