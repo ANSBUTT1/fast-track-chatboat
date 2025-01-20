@@ -3,12 +3,7 @@ import { FaCheckCircle } from 'react-icons/fa';  // Importing a more professiona
 import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 const PricingModule = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 sm:px-16 py-16">
-    <div className='flex justify-end mb-6'>
-      <Link to="/">
-        <button className='bg-primary text-secondary px-10 py-2 rounded-lg hover:bg-secondary hover:text-primary border border-primary '>back</button>
-      </Link>
-    </div>
+    <div className="max-w-7xl mx-auto px-6 sm:px-16 py-8">
     <h1 className="text-4xl font-bold text-center text-primary mb-12">FasTrak Pricing</h1>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
       {/* Basic Plan */}
@@ -83,6 +78,13 @@ const PricingModule = () => {
         <button className="bg-primary text-secondary px-10 py-2 rounded-lg hover:bg-secondary hover:text-primary border border-primary">Contact Us</button>
       </div>
     </div>
+     <div className="flex justify-end mt-6">
+            <Link to="/">
+              <button className="bg-primary text-secondary px-4 text-xs py-2 rounded-lg hover:bg-secondary hover:text-primary border border-primary ">
+                back
+              </button>
+            </Link>
+          </div>
   </div>
   )
 }

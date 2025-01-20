@@ -7,11 +7,15 @@ import SignUp from './pages/SignUp';
 import ForgetPassword from './pages/ForgetPassword';
 import ResetPassword from './pages/Resetpassword';
 import Pricing from './pages/Pricing';
+import Services from './pages/Services';
+import PageLayout from './layout/PageLayout';
+import ServicesDetails from './components/ServicesDetails';
 
 const App = () => {
   return (
     <Router>
       <Routes>
+      <Route element={<PageLayout/>}>
         <Route path="/" element={<Home />} />
         <Route path="/test" element={<Test />} />
         <Route path="/login" element={<Login/>} />
@@ -19,6 +23,10 @@ const App = () => {
         <Route path='/forgot-password' element={<ForgetPassword/>} />
         <Route path="/rest-password" element={<ResetPassword/>} />
         <Route path='/pricing' element={<Pricing/>}/>
+        <Route path='/services' element={<Services/>} />
+           {/* Dynamic route for service details */}
+           <Route path="/service/:id" element={<ServicesDetails/>} />
+        </Route>
       </Routes>
     </Router>
   );
