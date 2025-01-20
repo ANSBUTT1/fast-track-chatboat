@@ -1,11 +1,11 @@
 import React from 'react'
 import SearchEngine from '../components/SearchEngine'
-import Navbar from '../components/Navbar'
+// import Navbar from '../components/Navbar'
 
 const Home = () => {
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <SearchEngine/>
     </div>
   )

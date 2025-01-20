@@ -77,9 +77,11 @@ const Navbar = () => {
             <>
               {/* Gmail Link */}
               <li>
+                <Link  to="/services">
                 <div className="hover:underline text-sm font-semibold transition-colors duration-200 ease-in-out hover:text-primary cursor-pointer">
                   Services
                 </div>
+                </Link>
               </li>
 
               {/* Images Link */}
