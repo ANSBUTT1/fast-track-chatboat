@@ -10,10 +10,12 @@ import Pricing from './pages/Pricing';
 import Services from './pages/Services';
 import PageLayout from './layout/PageLayout';
 import ServicesDetails from './components/ServicesDetails';
+import CursorSnack from './components/CursorSnack';
 
 const App = () => {
   return (
     <Router>
+      <CursorSnack/>
       <Routes>
       <Route element={<PageLayout/>}>
         <Route path="/" element={<Home />} />
